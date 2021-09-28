@@ -1,0 +1,32 @@
+version: '3'
+services:  
+  mongo:
+    image: mongo:4.4.3-bionic
+    container_name: mongo_container
+    ports:
+      - 127.0.0.1:27018:27017
+    logging:
+      driver: "none"
+
+  # the KnowRob container
+  knowrob:
+    image: "sasjonge/knowrob_cloud"
+    container_name: knowrob_container
+    depends_on:
+      - 'mongo'
+    environment:
+      - KNOWROB_MONGODB_URI=mongodb://127.0.0.1:27018/?appname=knowrob
+    network_mode: host
+    entrypoint: ["/run_knowrob_local.sh"]
+    volumes:
+      - ./prolog:/prolog
+
+      # the KnowRob container
+  jupyter_knowrob:
+    image: "sasjonge/jupyter-knowrob"
+    container_name: jupyter_knowrob
+    depends_on:
+      - 'knowrob'
+    network_mode: host
+    volumes:
+      - ./lectures:/lectures
