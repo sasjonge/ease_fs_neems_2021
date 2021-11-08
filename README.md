@@ -2,7 +2,7 @@
 
 ## Start-Up
 
-To install and start the Jupyer-Lab and run the notebooks follow this steps:
+Please install docker and docker-compose to your system. To install and start the EASE Fall School 2021 Jupyer-Lab and run the notebooks follow this steps:
 
 1. Clone this repository and move into the directory: `https://github.com/sasjonge/ease_fs_neems_2021.git && cd ease_fs_neems_2021`
 2. Create the directory `data`. Place your NEEM data in the `data` directory. The directory should contain the subdirectories `triples`, `ros_tf`, `annotations`, `inferred`
