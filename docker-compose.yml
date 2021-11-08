@@ -5,6 +5,8 @@ services:
     container_name: mongo_container
     ports:
       - 127.0.0.1:27018:27017
+    volumes:
+      - ./data:/neem_data
     logging:
       driver: "none"
 
@@ -16,10 +18,15 @@ services:
       - 'mongo'
     environment:
       - KNOWROB_MONGODB_URI=mongodb://127.0.0.1:27018/?appname=knowrob
+      - KNOWROB_MONGO_HOST=127.0.0.1
+      - KNOWROB_MONGO_PORT=27018
+      - KNOWROB_MONGO_USER=
+      - KNOWROB_MONGO_PASS=
     network_mode: host
     entrypoint: ["/run_knowrob_local.sh"]
     volumes:
       - ./prolog:/prolog
+      - ./data:/neem_data
 
       # the KnowRob container
   jupyter_knowrob:
