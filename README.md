@@ -12,7 +12,7 @@ To install and start the EASE Fall School 2021 Jupyer-Lab and run the notebooks 
 2. Create the directory `data`. Place your NEEM data in the `data` directory. The directory should contain the subdirectories `triples`, `ros_tf`, `annotations`, `inferred`
 3. Run `docker-compose up`
 4. Wait till the knowrob_container is ready
-5. Open the Jupyter-Lab on [http://127.0.0.1:8888/lab](http://127.0.0.1:8888/lab)
+5. Open the Jupyter-Lab using the link shown in your terminal
 
 ## Run the exercises
 
