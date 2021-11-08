@@ -4,7 +4,7 @@
 
 Please install docker and docker-compose to your system.
 
-For the Fall School 2021 please download the NEEM from the following link: https://seafile.zfn.uni-bremen.de/seafhttp/files/8212fe12-a716-461b-b413-b08efed4837b/example_neem.zip
+For the Fall School 2021 please download the NEEM from the following link: https://seafile.zfn.uni-bremen.de/f/b66a71b257084d459b6c/?dl=1
 
 To install and start the EASE Fall School 2021 Jupyer-Lab and run the notebooks follow this steps:
 
